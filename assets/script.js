@@ -1,26 +1,11 @@
 var currentDay = moment();
 $("#currentDay").text(currentDay.format("dddd MMMM, Do"));
 
-
-/**
- * need function for save button
- * function= save contents of textarea to local sotrage
- * function = get saved text area from local storage
- * 
- */
-
-// var saveButtonF = ("saveBtn");
-// saveButtonF.addEventListener("click", function (event) {
-    
-// });
-
-
-// loop style hour blocks
 var currentHour = $(".hourBlock");
 $.each(currentHour, function (idx, element) {
     var hourString = $(element).children().children().eq(1).attr("id");      
     var momentHour =  moment(hourString,"ha");
-    var momentCurrentTime = moment().subtract("hours", 8);
+    var momentCurrentTime = moment();
 
       if(momentHour.format("ha") == momentCurrentTime.format("ha")) {
           $(element).children().children().eq(1).addClass("present")
@@ -36,15 +21,36 @@ $.each(currentHour, function (idx, element) {
         console.log("future");
         textArea = "future";
     }
-    /**pseudo coding how to identify hour for each row
-     *hard code each row with hour in id
-     within loop check thew id of each hour 
-     write logic if hour past =grey current hour = red
-     future = green
-     jquery addClass
-     */
-    // console.log(element);
 });
 
-var currentHour = moment();
-$("#text9am").text(currentHour.format("h:a"));
+var buttonSave = $("saveBtn");
+buttonSave.addEventListener("click", hourString);
+
+
+
+function buttonSave() {
+  localStorage.setItem("textArea", textArea);
+}
+
+function getSavedText() {
+  var textArea = localStorage.getItem("textArea")
+}
+
+
+
+
+// var buttonSave addeventlistener function to get hourstring 
+/**
+ * need function for save button
+ * function= save contents of textarea to local sotrage,hourstring , textareacontents
+ * function = get saved text area from local storage
+ * function that accepts hour string
+ */
+// loop style hour blocks
+
+// $(".saveBtn").on("click",function(event){
+//   event.preventDefault();
+//   var value = $(this).siblings(".textArea").value();
+// })
+
+//   localStorage.setItem("finalFinalScore", JSON.stringify(sortedHighScores));
