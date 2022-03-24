@@ -72,3 +72,7 @@ textarea {
   transition: all 0.3s ease-in-out;
   color: rgba(12, 15, 160, 0.973);
 }
+
+.saveBtn i {
+  pointer-events: none;
+}

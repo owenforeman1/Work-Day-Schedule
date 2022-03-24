@@ -23,21 +23,64 @@ $.each(currentHour, function (idx, element) {
     }
 });
 
-var buttonSave = $("saveBtn");
-buttonSave.addEventListener("click", hourString);
 
 
 
-function buttonSave() {
-  localStorage.setItem("textArea", textArea);
+
+
+
+
+
+function theButtonSave(event) {
+    console.log("button clicked");
+    var textSelect = $(event.target).siblings().val();
+    localStorage.setItem("textSave", textSelect);
+    localStorage.setItem("textSave", textSelect);
+    localStorage.setItem("textSave", textSelect);
+    localStorage.setItem("textSave", textSelect);
+    localStorage.setItem("textSave", textSelect);
+    localStorage.setItem("textSave", textSelect);
+    localStorage.setItem("textSave", textSelect);
+    localStorage.setItem("textSave", textSelect);
+    localStorage.setItem("textSave", textSelect);
+    console.log($(event.target).siblings().val());
 }
+
+
+
+ $(".saveBtn").click(function(event){
+   console.log($(event.target).siblings());
+   theButtonSave(event); 
+ });
+
+
+
+
+
+
 
 function getSavedText() {
-  var textArea = localStorage.getItem("textArea")
+console.log(localStorage.getItem("textSave")); 
+console.log(localStorage.getItem("textSave"));
 }
 
+$(document).ready(function () {
+    console.log("ready!");
+    getSavedText();
+});
 
 
+
+
+
+
+
+
+
+// You don't have a .letter-button  class but a .saveBtn one.
+// You don't have a buttonListEl but your buttons are probably in a container that can listen for a click.
+// If you can successfully console.log($(event.target)) and store it in a variable
+// How can you use DOM traversal methods to navigate from the button to the neighboring input or textarea?
 
 // var buttonSave addeventlistener function to get hourstring 
 /**
