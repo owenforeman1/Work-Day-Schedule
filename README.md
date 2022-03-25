@@ -16,13 +16,8 @@ Open the index.html in a browser or open the deployed page.
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
-
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
-
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
+![](./assets/images/screencapture-file-C-Users-owen-Desktop-Bootcamp-Homework-Work-Day-Schedule-index-html-2022-03-24-22_43_40.png)
+https://owenforeman1.github.io/Work-Day-Schedule/
 
 ## License
 
